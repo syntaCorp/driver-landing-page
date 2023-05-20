@@ -20,6 +20,12 @@ const LoginForm = () => {
   };
 
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
+    setIsChecked(event.target.checked);
+  };
+
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit} className="text-left">
       <h4 className="font-weight-bolder mb-2 text-dark">Become a Bolt driver</h4>
@@ -40,6 +46,9 @@ const LoginForm = () => {
 
       <Form.Group className="text-left my-4">
         <Form.Check
+          id="agreement"
+          name="terms"
+          type="checkbox"
           required
           label={
             <div className="ml-2">

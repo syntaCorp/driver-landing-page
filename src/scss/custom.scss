@@ -9,10 +9,9 @@ $body-bg: #4450d5;
 $primary: #34d186;
 $border-radius-lg: .9em;
 
-.navbar-light .navbar-nav .nav-link{
+a{
     color: #249e64;
 }
-
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
@@ -65,7 +64,8 @@ $border-radius-lg: .9em;
  }
 
  .feedback-pos{
-    // position: absolute;
+    position: absolute;
+    left: -45%;
  }
 
  form .form-control-lg {
