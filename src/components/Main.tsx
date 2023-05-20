@@ -1,20 +1,10 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
 import LoginForm from "./LoginForm";
 
 export function Main(): React.ReactElement {
 
     return (
         <React.Fragment>
-            {/*   font-size: 4rem;
-    line-height: 4.5rem;
-    color: #fff;
-    text-align: start;
-    font-family: "Euclid Circular B", sans-serif;
-    text-align: start;
-    max-width: 8em;
-    }
- */}
             <main>
                 <div className="container text-center d-flex align-items-center main--vh">
                     <div className="row flex-grow-1 no-gutters">
@@ -29,7 +19,7 @@ export function Main(): React.ReactElement {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-sm-12 col-md-5 bg-white py-4 px-4 mb-5 rounded-lg text-left">
+                        <div className="col-sm-12 col-md-5 bg-white py-4 px-4 mb-5 rounded-lg text-left mt-lg-0 mt-3 text-muted">
                             <LoginForm />
 
                             {/* <Form className="text-left">

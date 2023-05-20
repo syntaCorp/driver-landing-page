@@ -1,6 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
+// import { getCountries, getCountryCallingCode } from 'react-phone-number-input';
+import en from 'react-phone-number-input/locale/en.json';
+import Cities from "./Cities";
+import DialCodeSelect from "./DialCodeSelect";
+
 
 const LoginForm = () => {
   const [validated, setValidated] = useState(false);
@@ -11,50 +16,27 @@ const LoginForm = () => {
       event.preventDefault();
       event.stopPropagation();
     }
-
     setValidated(true);
   };
 
+
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit} className="text-left">
-      <h4 className="font-weight-bolder mb-2">Become a bolt driver</h4>
-      <p className="font-weight-light mb-3 sm-font">
+      <h4 className="font-weight-bolder mb-2 text-dark">Become a Bolt driver</h4>
+      <p className="font-weight-normal mb-3 sm-font">
         If you have multiple cars or drivers<a href="#sign-up"> sign up as a fleet owner.</a>
       </p>
       <Form.Group as={Row} controlId="userEmail" className="text-left mb-3 px-3">
-        <Form.Label>Email</Form.Label>
+        <Form.Label className="font-weight-bold text-dark">Email</Form.Label>
         <Form.Control size="lg" required type="email" placeholder="Email" />
         <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
       </Form.Group>
 
-      <Form as={Row} className="align-items-end text-left mb-3">
-        <Form.Group as={Col} md="5" controlId="countryCode">
-          <Form.Label>Phone</Form.Label>
-          <Form.Control size="lg" as="select" required>
-            <option>+233</option>
-            <option>+234</option>
-            <option>+343</option>
-            <option>+424</option>
-            <option>+53</option>
-          </Form.Control>
-          <Form.Control.Feedback type="invalid">Phone is required</Form.Control.Feedback>
-        </Form.Group>
+      {/* dialing code selection */}
+      <DialCodeSelect />
 
-        <Form.Group as={Col} md="7" controlId="userPhone">
-          <Form.Control size="lg" required type="text" placeholder="Phone" />
-        </Form.Group>
-      </Form>
-
-      <Form.Group controlId="cities" className="text-left">
-        <Form.Label>City</Form.Label>
-        <Form.Control size="lg" as="select" required>
-          <option>Accra</option>
-          <option>Lagos</option>
-          <option>Lesotho</option>
-          <option>Mumbai</option>
-          <option>Kenya</option>
-        </Form.Control>
-      </Form.Group>
+      {/* cities selection */}
+      {<Cities />}
 
       <Form.Group className="text-left my-4">
         <Form.Check

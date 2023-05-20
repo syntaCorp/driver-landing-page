@@ -1,0 +1,48 @@
+// import en from 'react-phone-number-input/locale/en';
+import PhoneInput from 'react-phone-number-input/input'
+
+import en from 'react-phone-number-input/locale/en.json';
+import CodeSelect from './CodeSelect';
+import { useState } from 'react';
+
+const CountryCode = () => {
+    const [country, setCountry] = useState('GH')
+    const [value, setValue] = useState()
+    return (
+        <div>
+            <CodeSelect
+                labels={en}
+                value={country}
+                onChange={setCountry} />
+
+            {/* <PhoneInput
+                country={country}
+                value={value}
+                onChange={setValue} /> */}
+
+
+        </div>
+    )
+}
+export default CountryCode;
+
+// import PhoneInput from 'react-phone-number-input/input'
+// import en from 'react-phone-number-input/locale/en'
+// import CountrySelect from './CountrySelect'
+
+// function Example() {
+//     const [country, setCountry] = useState('US')
+//     const [value, setValue] = useState()
+//     return (
+//         <div>
+//             <CountrySelect
+//                 labels={en}
+//                 value={country}
+//                 onChange={setCountry} />
+//             <PhoneInput
+//                 country={country}
+//                 value={value}
+//                 onChange={setValue} />
+//         </div>
+//     )
+// }

@@ -1,10 +1,10 @@
 // Override default variables before the import
 @import url('https://fonts.cdnfonts.com/css/euclid-circular-b');
                 
-
-  // Background color: #4450d5
+// Background color: #4450d5
 // Link color: #249e64
 // Button color: #34d186
+
 $body-bg: #4450d5;
 $primary: #34d186;
 $border-radius-lg: .9em;
@@ -22,7 +22,6 @@ $border-radius-lg: .9em;
 }
 .container-fluid {
     background-color: #fff;
-    // width: 100%;
 }
 
 .container {
@@ -49,17 +48,28 @@ $border-radius-lg: .9em;
 }
 
 
-
 .sm-font{
     font-size: .9rem;
 }
 
-.form-check{
-    // line-height: normal;
-}
 .form-check-input{
     width: 19px;
     height: 19px;
+}
+.gray{
+    color: #6c757d;
+}
+
+ .max-content{
+    width: max-content;
+ }
+
+ .feedback-pos{
+    // position: absolute;
+ }
+
+ form .form-control-lg {
+    border-radius: 4px;
 }
 
 @media (min-width: 768px) {
@@ -75,12 +85,4 @@ $border-radius-lg: .9em;
     line-height:normal;
     max-width:fit-content;
 }
-}
-
-form .form-control-lg {
-    border-radius: 0;
-}
-
-.gray{
-    color: #6c757d;
 }
