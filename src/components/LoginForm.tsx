@@ -5,6 +5,7 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import en from 'react-phone-number-input/locale/en.json';
 import Cities from "./Cities";
 import DialCodeSelect from "./DialCodeSelect";
+import DialCodeList from "./DialCodeList";
 
 
 const LoginForm = () => {
@@ -19,12 +20,11 @@ const LoginForm = () => {
     setValidated(true);
   };
 
+  // const [isChecked, setIsChecked] = useState(false);
 
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
-    setIsChecked(event.target.checked);
-  };
+  // const handleCheckboxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
+  //   setIsChecked(event.target.checked);
+  // };
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit} className="text-left">

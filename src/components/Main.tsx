@@ -19,32 +19,12 @@ export function Main(): React.ReactElement {
                                 </span>
                             </div>
                         </div>
+
+                        {/* login form */}
                         <div className="col-sm-12 col-md-5 bg-white py-4 px-4 mb-5 rounded-lg text-left mt-lg-0 mt-3 text-muted">
                             <LoginForm />
-
-                            {/* <Form className="text-left">
-                                <h4 className="font-weight-bolder">Become a bolt driver</h4>
-                                <p className="font-weight-light">If you have multiple cars <a href="#sign-up">sign up a fleet owner</a>
-                                </p>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Label className="text-left">Email address</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email" />
-                                    <Form.Text className="text-muted">
-                                        We'll never share your email with anyone else.
-                                    </Form.Text>
-                                </Form.Group>
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" />
-                                </Form.Group>
-                                <Form.Group controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Check me out" />
-                                </Form.Group>
-                                <Button variant="primary" type="submit">
-                                    Submit
-                                </Button>
-                            </Form> */}
                         </div>
+                        {/* end login form */}
                     </div>
                 </div>
             </main>
